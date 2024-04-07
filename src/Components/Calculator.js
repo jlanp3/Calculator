@@ -9,14 +9,14 @@ const Calculator = () => {
 
   useEffect(() => {
     // decimal numbers need to include
-    if (num) {
-      if (num.includes("x")) {
-        let mul = num.replace("x", "*");
-        setCal(mul);
-      } else {
-        setCal(num);
-      }
+    //if (num) {
+    if (num.includes("x")) {
+      let mul = num.replace("x", "*");
+      setCal(mul);
+    } else {
+      setCal(num);
     }
+    //}
   }, [num]);
 
   const handleClick = (e) => {
@@ -25,8 +25,9 @@ const Calculator = () => {
       setNum("");
       setCal("");
       setRes("");
-    } else if (dat === "0") {
-      setRes(num);
+      // } else if (num === "=") {
+      //   let result = eval(cal);
+      //   setRes(result);
     } else if (dat === "=") {
       let result = eval(cal);
       setRes(result);
