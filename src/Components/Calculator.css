@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "7Segment";
+  src: url("../Assets/7Segment.ttf");
+}
+
+.calculator {
+  border: 3px solid #a28089;
+  border-radius: 5px;
+}
+
+.formulaScreen {
+  width: auto;
+  max-width: 320px;
+  height: 32px;
+  background-color: black;
+  color: yellowgreen;
+  font-family: "7Segment";
+  font-weight: normal;
+  font-size: 2em;
+  text-align: end;
+}
+#display {
+  width: auto;
+  max-width: 320px;
+  height: 32px;
+  background-color: black;
+  color: aliceblue;
+  font-family: "7Segment";
+  font-weight: normal;
+  font-size: 2em;
+  text-align: end;
+}
