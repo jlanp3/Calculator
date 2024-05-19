@@ -2,61 +2,61 @@ import "./Buttons.css";
 
 const Buttons = ({ handleClick }) => {
   return (
-    <div className="buttons">
-      <button id="clear" className="jumbo" value={"AC"} onClick={handleClick}>
+    <div className="buttons" onClick={handleClick}>
+      <button id="clear" className="jumbo" value={"AC"} data-action="clear">
         AC
       </button>
-      <button id="divide" value={"/"} onClick={handleClick}>
+      <button id="divide" value={"/"} data-action="divide">
         /
       </button>
-      <button id="multiply" value={"x"} onClick={handleClick}>
+      <button id="multiply" value={"x"} data-action="multiply">
         x
       </button>
-      <button id="seven" value={"7"} onClick={handleClick}>
+      <button id="seven" value={"7"}>
         7
       </button>
-      <button id="eight" value={"8"} onClick={handleClick}>
+      <button id="eight" value={"8"}>
         8
       </button>
-      <button id="nine" value={"9"} onClick={handleClick}>
+      <button id="nine" value={"9"}>
         9
       </button>
-      <button id="subtract" value={"-"} onClick={handleClick}>
+      <button id="subtract" value={"-"} data-action="subtract">
         -
       </button>
-      <button id="four" value={"4"} onClick={handleClick}>
+      <button id="four" value={"4"}>
         4
       </button>
-      <button id="five" value={"5"} onClick={handleClick}>
+      <button id="five" value={"5"}>
         5
       </button>
-      <button id="six" value={"6"} onClick={handleClick}>
+      <button id="six" value={"6"}>
         6
       </button>
-      <button id="add" value={"+"} onClick={handleClick}>
+      <button id="add" value={"+"} data-action="add">
         +
       </button>
-      <button id="one" value={"1"} onClick={handleClick}>
+      <button id="one" value={"1"}>
         1
       </button>
-      <button id="two" value={"2"} onClick={handleClick}>
+      <button id="two" value={"2"}>
         2
       </button>
-      <button id="three" value={"3"} onClick={handleClick}>
+      <button id="three" value={"3"}>
         3
       </button>
       <button
         id="equals"
         style={{ position: "absolute", height: "130px" }}
         value={"="}
-        onClick={handleClick}
+        data-action="calculate"
       >
         =
       </button>
-      <button id="zero" className="jumbo" value={"0"} onClick={handleClick}>
+      <button id="zero" className="jumbo" value={"0"}>
         0
       </button>
-      <button id="decimal" value={"."} onClick={handleClick}>
+      <button id="decimal" value={"."} data-action="decimal">
         .
       </button>
     </div>
