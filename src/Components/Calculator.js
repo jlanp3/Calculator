@@ -52,6 +52,7 @@ const Calculator = () => {
         action === "multiply" ||
         action === "divide"
       ) {
+        // there is a bug in the -- operation
         console.log("operator");
         if (res) {
           dispIni.current.textContent = key;
@@ -75,7 +76,11 @@ const Calculator = () => {
             });
           }
         } else {
-          if (dig.slice(-1) === "-" && !dig.match(/-{2}$/) && key === "-") {
+          if (
+            dig.match(/\d*([+]|[x]|[/]|[*])$/) &&
+            !dig.match(/-{2}$/) &&
+            key === "-"
+          ) {
             console.log("in else if");
             dispIni.current.textContent = key;
             let val = dig + key;
@@ -87,7 +92,7 @@ const Calculator = () => {
               let val = dig.slice(0, -2) + key;
               setDig(val);
             } else if (dig.match(/\d*([+]|[x]|[/]|[*])$/) && key === "-") {
-              //console.log("in the +- situation");
+              console.log("in the +- situation");
               dispIni.current.textContent = key;
               setDig((prevState) => {
                 return prevState + key;
